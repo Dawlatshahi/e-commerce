@@ -30,10 +30,12 @@ function App() {
 						path="/kids"
 						element={<ShopCategory banner={kid_banner} category="kid" />}
 					/>
-					<Route path="*" element={<Product />} />
-					<Route path="/productId" element={<Product />} />
+
+					<Route path="/product/:productId" element={<Product />} />
 					<Route path="/cart" element={<Cart />} />
 					<Route path="/login" element={<LoginSignup />} />
+
+					<Route path="*" element={<div>404 Not Found</div>} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
